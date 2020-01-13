@@ -169,7 +169,7 @@ def main():
     parser.add_argument('--mirror-augment', help='Mirror augment (default: %(default)s)', default=True, metavar='BOOL', type=_str_to_bool)
     parser.add_argument('--metrics', help='Comma-separated list of metrics or "none" (default: %(default)s)', default='fid50k', type=_parse_comma_sep)
 
-    args = parser.parse_args()
+    args = parser.parse_args(args=[])
 
     if not os.path.exists(args.data_dir):
         print ('Error: dataset root directory does not exist.')
